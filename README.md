@@ -13,7 +13,7 @@ This platform is built using:
 ## 🎥 Demo Video
 
 Check out the live walkthrough of the platform on YouTube:  
-👉 [Watch the demo](---)
+👉 [Watch the demo](https://youtu.be/aUPErkvGQ2s)
 
 ---
 
