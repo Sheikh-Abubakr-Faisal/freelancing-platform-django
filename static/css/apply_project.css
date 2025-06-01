@@ -1,0 +1,10 @@
+.card-header {
+    background: #007bff;
+    color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}

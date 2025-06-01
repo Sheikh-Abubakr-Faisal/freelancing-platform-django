@@ -1,0 +1,49 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}My Projects{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelance_projects.css">
+
+<div class="container py-5">
+  <h2 class="mb-4 text-center">My Projects</h2>
+
+  <!-- Project Card -->
+  <div class="project-card">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div>
+        <div class="project-title">Website Redesign</div>
+        <div class="project-meta">Client: Jane Smith • Deadline: 2025-04-25</div>
+      </div>
+      <span class="badge bg-success badge-status">In Progress</span>
+    </div>
+    <p>Redesign and develop a responsive website using HTML, CSS, Bootstrap, and JavaScript with performance optimization and animations.</p>
+    <p><strong>Budget:</strong> $500</p>
+    <div class="project-actions">
+      <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+      <a href="#" class="btn btn-outline-secondary btn-sm">Edit</a>
+      <a href="#" class="btn btn-outline-danger btn-sm">Delete</a>
+    </div>
+  </div>
+
+  <!-- Another Project Card -->
+  <div class="project-card">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <div>
+        <div class="project-title">Mobile App UI Design</div>
+        <div class="project-meta">Client: Ahmed Khan • Deadline: 2025-05-10</div>
+      </div>
+      <span class="badge bg-warning text-dark badge-status">Pending</span>
+    </div>
+    <p>Design a modern UI for a mobile application including user flows, wireframes, and responsive layouts.</p>
+    <p><strong>Budget:</strong> $300</p>
+    <div class="project-actions">
+      <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+      <a href="#" class="btn btn-outline-secondary btn-sm">Edit</a>
+      <a href="#" class="btn btn-outline-danger btn-sm">Delete</a>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock main %}

@@ -1,0 +1,100 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Edit Profile{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelance_edit_profile.css">
+
+<div class="container py-5">
+  <div class="form-container">
+    <h2 class="mb-4 text-center">Edit Profile</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <!-- Profile Picture -->
+      <div class="form-section text-center">
+        <img src="/media/{{profile.pfp}}" alt="Profile" class="profile-picture-preview mb-3" />
+        <div>
+          <input type="file" class="form-control w-auto d-inline-block" id="pfp" name="pfp" />
+        </div>
+      </div>
+
+      <!-- Basic Info -->
+      <div class="form-section">
+        <h6>Basic Information</h6>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{user.first_name}}" />
+          </div>
+          <div class="col-md-6">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{user.last_name}}" />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{user.email}}" />
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{ profile.phone }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" value="{{user.location}}" />
+          </div>
+          <div class="col-md-6">
+            <label for="rate" class="form-label">Hourly Rate ($)</label>
+            <input type="number" class="form-control" id="rate" name="hourly_rate" value="{{freelancer_profile.hourly_rate}}" />
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="form-section">
+        <h6>About Me</h6>
+        <textarea class="form-control" rows="4" name="bio" placeholder="Write about yourself...">{{profile.bio}}</textarea>
+      </div>
+
+      <!-- Skills -->
+      <div class="form-section">
+        <h6>Skills</h6>
+        <input type="text" class="form-control" name="skills" value="{{freelancer_profile.skills}}" />
+        <small class="text-muted">Separate skills with commas.</small>
+      </div>
+
+      <!-- Experience -->
+      <div class="form-section">
+        <h6>Experience</h6>
+        <textarea class="form-control" rows="3" name="Experience" placeholder="Describe your past job experience...">{{freelancer_profile.Experience}}</textarea>
+      </div>
+
+      <!-- Job Success Rate -->
+      <div class="form-section">
+        <h6>Job Success Rate (%)</h6>
+        <input type="number" class="form-control" placeholder="e.g., 95" />
+      </div>
+
+      <!-- Certifications -->
+      <div class="form-section">
+        <h6>Certifications</h6>
+        <input type="file" class="form-control" name="certifications[]" multiple />
+        <div class="file-preview text-muted small"><img src="" alt=""></div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="form-section">
+        <h6>Portfolio</h6>
+        <input type="file" class="form-control" name="portfolio" multiple />
+        <div class="file-preview text-muted small">Upload screenshots, PDFs, or project files.</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="text-end">
+        <button type="reset" class="btn btn-secondary me-2">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock main %}

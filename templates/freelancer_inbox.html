@@ -1,0 +1,56 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Inbox{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_inbox.css">
+
+<div class="container py-4">
+  <h2 class="mb-4 text-center">Inbox</h2>
+
+  <div class="inbox-container">
+    <!-- Left Sidebar (Conversations) -->
+    <div class="conversation-list">
+      <div class="conversation-item active">
+        <strong>Jane Smith</strong>
+        <p class="text-muted mb-0">Looking forward to the design!</p>
+      </div>
+      <div class="conversation-item">
+        <strong>Ali Raza</strong>
+        <p class="text-muted mb-0">When can we schedule?</p>
+      </div>
+      <div class="conversation-item">
+        <strong>Sarah Ahmed</strong>
+        <p class="text-muted mb-0">Got the files, thanks!</p>
+      </div>
+    </div>
+
+    <!-- Right Chat Box -->
+    <div class="chat-box">
+      <div class="chat-messages">
+        <div class="message received">
+          <p>Hey, are you available for the landing page redesign?</p>
+        </div>
+        <div class="message sent">
+          <p>Yes, I’m available. I can start tomorrow.</p>
+        </div>
+        <div class="message received">
+          <p>Great! Please send me a rough estimate.</p>
+        </div>
+        <div class="message sent">
+          <p>Sure! I’ll send it over in a few minutes.</p>
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <form class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Type a message..." />
+          <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock main %}

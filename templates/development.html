@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}development{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/pg_style.css">
+
+<div class="container py-0 my-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/dev_img1.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Build the Future with Expert Developers</h5>
+          <p>Find skilled freelancers for web, software, and mobile development projects.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/dev_img.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Custom Software Solutions</h5>
+          <p>Get tailored applications and robust systems for your business.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/dev_img2.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Innovative Web & App Development</h5>
+          <p>Hire professionals to create stunning websites and mobile apps.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="pages pt-5">
+<h1 class="text-center">Empower Your Vision with Expert Developers</h1>
+<p class="text-center">Welcome to the <b>Development Hub</b>, where ideas transform into reality! Whether you're an aspiring developer looking to kickstart your freelancing career or a client searching for top-tier tech talent, you've come to the right place.</p>
+
+<h2 class="pt-3"><b>For Freelancers:</b> Start Your Journey as a Developer</h2>
+
+<p>Are you passionate about coding? Do you dream of working on exciting projects and earning from your skills? Freelancing offers endless opportunities to build your portfolio, collaborate with global clients, and shape your career on your terms.</p>
+
+<h3>🚀 Why Become a Freelance Developer?</h3>
+✅ Work from anywhere, anytime<br>
+✅ Choose projects that match your expertise<br>
+✅ Build a diverse portfolio and gain global exposure<br>
+✅ Earn competitive rates and grow your career<br>
+
+<p class="pt-3">Whether you're a web developer, app creator, AI enthusiast, or backend expert, this is your chance to turn your passion into profit. Start your freelancing journey today!</p>
+
+<h2><b>For Clients:</b> Hire Skilled Developers for Your Next Project</h2>
+
+<p>Looking for expert developers to bring your vision to life? Whether you need a responsive website, a feature-rich mobile app, or cutting-edge software, our talented freelancers are ready to deliver high-quality solutions tailored to your needs.</p>
+
+<h3>💡 What Our Developers Offer:</h3>
+✅ Frontend & Backend Development (React, Angular, Node.js, Django, Laravel, etc)<br>
+✅ Custom Web & Mobile App Development (iOS, Android, Flutter)<br>
+✅ AI, Machine Learning & Data Science Solutions<br>
+✅ eCommerce, CMS, and SaaS Platforms<br>
+
+<h3 class="pt-3">💼 Why Hire from Our Platform?</h3>
+✔️ Access a pool of verified professionals<br>
+✔️ Flexible pricing to match your budget<br>
+✔️ Quick turnaround with high-quality results<br>
+✔️ Secure payments and transparent communication<br>
+
+<p>Let us help you find the right developer to build your dream project. Post a job and get started today!</p>
+<br>
+<p>💻 <b>Whether you want to work as a developer or hire one, this is where success begins!</b> Join us now and take the next step in the world of digital innovation. 🚀</p>
+
+
+<div class="btn-pg d-flex justify-content-around py-4">
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Start Your Journey as Developer
+</button>
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Hire a Developer
+</button></div>
+</div>
+</div>
+{% endblock main %}

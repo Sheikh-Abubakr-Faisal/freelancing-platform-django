@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .logout-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  .logout-box i {
+    font-size: 48px;
+    color: #dc3545;
+    margin-bottom: 15px;
+  }
+  .logout-box h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .logout-box p {
+    margin-bottom: 25px;
+    color: #6c757d;
+  }

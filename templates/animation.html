@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}Video & Animation{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/pg_style.css">
+
+<div class="container py-0 my-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/video1.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bring Stories to Life</h5>
+          <p>Professional video and animation services that captivate and engage.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/video2.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visual Storytelling at Its Best</h5>
+          <p>Transform ideas into powerful videos and animations.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/video3.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Boost Your Brand with Video</h5>
+          <p>Engaging video content to grow your business and audience.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="pages pt-5">
+<h1 class="text-center">Create Stunning Videos & Animations</h1>
+<p class="text-center">Welcome to the <b>Video & Animation Hub</b>, where creativity meets motion! Whether you’re a <b>freelancer looking to produce stunning visuals</b> or a business in need of high-quality video content, this is your go-to platform.</p>
+
+<h2 class="pt-3"><b>For Freelancers:</b> Start Your Journey as a Video Creator or Animator</h2>
+
+<p>Passionate about video editing, motion graphics, or animation? As a freelancer, you can <b>create engaging content</b> for brands, social media influencers, and businesses that need eye-catching visuals.</p>
+
+<h3>Why Become a Freelance Video Creator?</h3>
+<ul>
+    <li>Work with global brands and creative agencies</li>
+    <li>Earn high rates for video and animation expertise</li>
+    <li>Showcase your creativity through engaging visuals</li>
+    <li>Enjoy flexible work opportunities from anywhere</li>
+</ul>
+
+<h3>In-Demand Video & Animation Skills:</h3>
+<ul>
+    <li>Video Editing & Post-Production</li>
+    <li>Motion Graphics & 2D/3D Animation</li>
+    <li>Explainer Videos & Whiteboard Animation</li>
+    <li>Video Ads & Social Media Content</li>
+    <li>Visual Effects (VFX) & Cinematic Editing</li>
+</ul>
+
+<p><b>Turn your passion for video creation into a thriving freelancing career today!</b></p>
+
+<h2><b>For Clients:</b> Hire Video Experts to Elevate Your Brand</h2>
+
+<p>Need high-quality video content that captures attention? Whether it’s <b>product videos, promotional content, or animation</b>, our expert freelancers create visually compelling videos that tell your story effectively.</p>
+
+<h3>What Our Video & Animation Experts Offer:</h3>
+<ul>
+    <li>Professional Video Editing & Color Grading</li>
+    <li>2D/3D Animation & Motion Graphics</li>
+    <li>Social Media & YouTube Video Creation</li>
+    <li>Explainer Videos & Corporate Presentations</li>
+    <li>Visual Effects (VFX) & Advanced Editing</li>
+</ul>
+
+<h3 class="pt-3">Why Hire Freelancers for Video & Animation?</h3>
+<ul>
+<li>Access experienced video creators and animators</li>
+<li>Cost-effective, high-quality video solutions</li>
+<li>Custom storytelling that fits your brand’s message</li>
+<li>Engaging content that boosts audience retention</li>
+</ul>
+
+<p>Bring your brand to life with expert video production – Post your project and get started today!</p>
+<br>
+<p><b>Whether you’re a freelancer looking to showcase your video skills or a business in need of high-quality video content, this is where the magic happens!</b></p>
+
+<div class="btn-pg d-flex justify-content-around py-4">
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Start Your Journey as Freelancer
+</button>
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Hire a freelancer
+</button></div>
+</div>
+</div>
+{% endblock main %}

@@ -1,0 +1,55 @@
+{% extends "client_slider.html" %}
+{% block title %}Inbox{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_inbox.css">
+
+<div class="container py-4">
+  <h2 class="mb-4 text-center">Inbox</h2>
+
+  <div class="inbox-container">
+    <!-- Left Sidebar (Freelancer Conversations) -->
+    <div class="conversation-list">
+      <div class="conversation-item active">
+        <strong>Muhammad Usman</strong>
+        <p class="text-muted mb-0">Thanks, I’ll deliver it by tomorrow.</p>
+      </div>
+      <div class="conversation-item">
+        <strong>Ayesha Khan</strong>
+        <p class="text-muted mb-0">Do you want revisions?</p>
+      </div>
+      <div class="conversation-item">
+        <strong>Hamza Malik</strong>
+        <p class="text-muted mb-0">I’ve started working on the wireframes.</p>
+      </div>
+    </div>
+
+    <!-- Right Chat Box -->
+    <div class="chat-box">
+      <div class="chat-messages">
+        <div class="message received">
+          <p>Hi, the homepage design is ready for review.</p>
+        </div>
+        <div class="message sent">
+          <p>Awesome! Can you please share the preview link?</p>
+        </div>
+        <div class="message received">
+          <p>Sure, here's the Figma link: [link]</p>
+        </div>
+        <div class="message sent">
+          <p>Looks good. Let's move forward with the development.</p>
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <form class="d-flex">
+          <input type="text" class="form-control me-2" placeholder="Type a message..." />
+          <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock main %}

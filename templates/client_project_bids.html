@@ -1,0 +1,63 @@
+{% extends "client_slider.html" %}
+{% block title %}Project Bids{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/client_project_bids.css">
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Bids for "{{ project.title }}"</h2>
+    
+    {% if bids %}
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Freelancer</th>
+                        <th>Bid Amount</th>
+                        <th>Message</th>
+                        <th>Submitted On</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for bid in bids %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ bid.freelancer_id.first_name }} {{ bid.freelancer_id.last_name }}</td>
+                            <td>Rs. {{ bid.amount }}</td>
+                            <td>{{ bid.cover_letter|truncatewords:15 }}</td>
+                            <td>{{ bid.submission_date|date:"M d, Y" }}</td>
+
+                            <td>
+                                {% if bid.status == 'Pending' %}
+                                    <span class="badge bg-warning text-dark">{{ bid.status }}</span>
+                                {% elif bid.status == 'Accepted' %}
+                                    <span class="badge bg-success">{{ bid.status }}</span>
+                                {% elif bid.status == 'Rejected' %}
+                                    <span class="badge bg-danger">{{ bid.status }}</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">{{ bid.status }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if bid.status == 'Pending' %}
+                                    <a href="{% url 'accept_bid' bid.id %}" class="btn btn-sm btn-success me-1">Accept</a>
+                                    <a href="{% url 'reject_bid' bid.id %}" class="btn btn-sm btn-danger">Reject</a>
+                                {% else %}
+                                    <span class="text-muted">No action</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="alert alert-info text-center">No bids submitted yet for this project.</div>
+    {% endif %}
+</div>
+
+
+{% endblock main %}

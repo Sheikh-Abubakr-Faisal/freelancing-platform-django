@@ -1,0 +1,36 @@
+.hero {
+    background-image: url('/static/images/freelance-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero h2, .hero p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid #ffffff88;
+    padding-left: 15px;
+  }
+  
+  footer h5 {
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  

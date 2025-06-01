@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/sign_up.css">
+
+<div class="container form-container">
+    <h2 class="mb-4 text-center">User Registration</h2>
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-danger">{{ message }}</div>
+  {% endfor %}
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      
+      <!-- First Name -->
+      <div class="mb-3">
+        <label for="first_name" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="first_name" name="first_name" required>
+      </div>
+
+      <!-- Last Name -->
+      <div class="mb-3">
+        <label for="last_name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name" required>
+      </div>
+
+      <!-- UserName -->
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+  
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+  
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+  
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirm_password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+      </div>
+
+
+      <!-- Role -->
+      <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select class="form-select" id="role" name="role" required>
+          <option selected disabled>Select your role</option>
+          <option value="freelancer">Freelancer</option>
+          <option value="client">Client</option>
+        </select>
+      </div>
+  
+      <!-- Profile Picture -->
+      <div class="mb-3">
+        <label for="pfp" class="form-label">Profile Picture</label>
+        <input type="file" class="form-control" id="pfp" name="pfp" accept="image/*">
+      </div> 
+
+      <!-- Bio -->
+      <div class="mb-3">
+        <label for="bio" class="form-label">Bio</label>
+        <textarea class="form-control" id="bio" name="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+      </div>
+  
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" name="location">
+      </div>
+  
+      <!-- Phone -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="phone" name="phone" required>
+      </div>
+  
+      <!-- Verification Status -->
+      <div class="mb-3">
+        <label for="is_verified" class="form-label">Verification Status</label>
+        <select class="form-select" id="is_verified" name="is_verified" required>
+          <option value="True">Verified</option>
+          <option value="False">Not Verified</option>
+        </select>
+      </div>
+  
+      <!-- Submit -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+  
+    </form>
+  </div>  
+
+  {% endblock main %}

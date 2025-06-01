@@ -1,0 +1,87 @@
+{% extends "client_slider.html" %}
+{% block title %}Payments{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/client_payments.css">
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Payments</h2>
+
+  <!-- Payment Summary Cards -->
+  <div class="row g-4 mb-4 text-center">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 payment-summary-card">
+        <div class="card-body">
+          <h5 class="card-title">Total Spent</h5>
+          <p class="card-text fs-4 text-primary">$8,500</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 payment-summary-card">
+        <div class="card-body">
+          <h5 class="card-title">Pending Payments</h5>
+          <p class="card-text fs-4 text-warning">$1,200</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 payment-summary-card">
+        <div class="card-body">
+          <h5 class="card-title">Completed Projects</h5>
+          <p class="card-text fs-4 text-success">12</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Transactions -->
+  <div class="card shadow-sm border-0 mb-4">
+    <div class="card-header bg-white fw-bold">
+      Recent Transactions
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Freelancer</th>
+            <th>Project</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ali Raza</td>
+            <td>Website Development</td>
+            <td>$1,500</td>
+            <td><span class="badge bg-success">Paid</span></td>
+            <td>12 Apr 2025</td>
+          </tr>
+          <tr>
+            <td>Sarah Khan</td>
+            <td>Logo Design</td>
+            <td>$300</td>
+            <td><span class="badge bg-warning text-dark">Pending</span></td>
+            <td>10 Apr 2025</td>
+          </tr>
+          <tr>
+            <td>Usman Tariq</td>
+            <td>SEO Optimization</td>
+            <td>$700</td>
+            <td><span class="badge bg-success">Paid</span></td>
+            <td>08 Apr 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Pay Freelancer Button -->
+  <div class="text-end">
+    <button class="btn btn-primary"><i class="bi bi-wallet2 me-1"></i> Pay a Freelancer</button>
+  </div>
+</div>
+
+{% endblock main %}

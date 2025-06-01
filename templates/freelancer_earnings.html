@@ -1,0 +1,92 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Earnings{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_earnings.css">
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">Earnings</h2>
+  
+    <!-- Summary Cards -->
+    <div class="row mb-4">
+      <div class="col-md-4 col-sm-6 mb-3">
+        <div class="earnings-card text-center">
+          <div class="card-title">Total Earnings</div>
+          <div class="card-amount">$2,450</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-3">
+        <div class="earnings-card text-center">
+          <div class="card-title">Available Balance</div>
+          <div class="card-amount text-success">$800</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-3">
+        <div class="earnings-card text-center">
+          <div class="card-title">Pending Clearance</div>
+          <div class="card-amount text-warning">$320</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Transactions Table -->
+    <div class="card">
+      <div class="card-header bg-white">
+        <h5 class="mb-0">Recent Transactions</h5>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-bordered mb-0">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Client</th>
+                <th>Amount</th>
+                <th>Method</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-04-01</td>
+                <td>Landing Page UI</td>
+                <td>Jane Smith</td>
+                <td>$250</td>
+                <td>PayPal</td>
+                <td><span class="badge bg-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2025-03-25</td>
+                <td>Logo Design</td>
+                <td>Ali Raza</td>
+                <td>$100</td>
+                <td>Bank Transfer</td>
+                <td><span class="badge bg-warning text-dark">Pending</span></td>
+              </tr>
+              <tr>
+                <td>2025-03-18</td>
+                <td>Dashboard UI</td>
+                <td>Sarah Ahmed</td>
+                <td>$180</td>
+                <td>Payoneer</td>
+                <td><span class="badge bg-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>2025-03-10</td>
+                <td>Social Media Ads</td>
+                <td>David Khan</td>
+                <td>$120</td>
+                <td>PayPal</td>
+                <td><span class="badge bg-danger">Cancelled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+
+{% endblock main %}

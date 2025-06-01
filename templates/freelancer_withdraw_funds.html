@@ -1,0 +1,51 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Withdraw Funds{% endblock title %}
+{% block  main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_withdraw_funds.css">
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Withdraw Funds</h2>
+  
+    <div class="withdraw-container">
+      <form>
+        <!-- Available Balance -->
+        <div class="mb-3">
+          <label class="form-label">Available Balance</label>
+          <input type="text" class="form-control" value="$1,250.00" disabled />
+        </div>
+  
+        <!-- Withdraw Method -->
+        <div class="mb-3">
+          <label for="method" class="form-label">Withdraw Method</label>
+          <select id="method" class="form-select" required>
+            <option value="">Select Method</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank">Bank Transfer</option>
+            <option value="jazzcash">JazzCash</option>
+            <option value="easypaisa">EasyPaisa</option>
+          </select>
+        </div>
+  
+        <!-- Amount -->
+        <div class="mb-3">
+          <label for="amount" class="form-label">Amount ($)</label>
+          <input type="number" id="amount" class="form-control" placeholder="Enter amount" required />
+        </div>
+  
+        <!-- Notes -->
+        <div class="mb-3">
+          <label for="notes" class="form-label">Notes (Optional)</label>
+          <textarea id="notes" class="form-control" rows="3" placeholder="Add any withdrawal note..."></textarea>
+        </div>
+  
+        <!-- Submit -->
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Withdraw</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+{% endblock main  %}

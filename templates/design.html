@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}Design{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/pg_style.css">
+
+<div class="container py-0 my-0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/design1.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Creativity in Every Pixel</h5>
+          <p>Transforming ideas into visually stunning experiences.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/design2.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Design That Makes an Impact</h5>
+          <p>From logos to UI/UX, we craft visuals that tell a story.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/design3.jpg" class="d-block w-100" alt="..." width="100%" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bringing Brands to Life</h5>
+          <p>Professional design solutions for businesses worldwide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="pages pt-5">
+<h1 class="text-center">Bring Your Ideas to Life with Stunning Design</h1>
+<p class="text-center">Welcome to the <b>Design Hub</b>, where creativity transforms into reality! Whether you’re a <b>freelancer ready to showcase your artistic talent</b> or a <b>business looking for top-notch designs</b>, this is where imagination meets innovation.</p>
+
+<h2 class="pt-3"><b>For Freelancers:</b> Start Your Journey as a Creative Designer</h2>
+
+<p>Are you passionate about <b>graphic design, UI/UX, branding, or illustration?</b> As a freelance designer, you can work with <b>startups, brands, and businesses worldwide</b>, turning their ideas into visually stunning experiences.</p>
+
+<h3>Why Become a Freelance Designer?</h3>
+<ul>
+    <li>Work on exciting projects with international clients</li>
+    <li>Showcase your creativity & build a strong portfolio</li>
+    <li>Earn high rates for specialized design work</li>
+    <li>Choose your projects & work on your terms</li>
+</ul>
+
+<h3>In-Demand Freelance Design Skills:</h3>
+<ul>
+    <li>Logo & Branding Design</li>
+    <li>UI/UX Design for Websites & Apps</li>
+    <li>Social Media & Digital Graphics</li>
+    <li>Motion Graphics & Video Editing</li>
+    <li>Packaging & Print Design</li>
+</ul>
+
+<p><b>Turn your creative passion into a thriving freelancing career today!</b></p>
+
+<h2><b>For Clients:</b> Hire Expert Designers to Elevate Your Brand</h2>
+
+<p>Looking to <b>create a stunning brand identity, a user-friendly website, or eye-catching graphics?</b> Whether you need <b>a modern logo, engaging social media posts, or a sleek UI/UX design</b>, our expert freelance designers bring your vision to life.</p>
+
+<h3>What Our Designers Offer:</h3>
+<ul>
+    <li>Unique Logo & Brand Identity Development</li>
+    <li>Web & Mobile UI/UX Design for Seamless Experiences</li>
+    <li>Engaging Social Media & Digital Marketing Graphics</li>
+    <li>Professional Print & Packaging Design</li>
+    <li>Video Editing & Motion Graphics for Impactful Content</li>
+</ul>
+
+<h3 class="pt-3">Why Hire Freelance Designers from Our Platform?</h3>
+<ul>
+<li>Work with top-tier design talent from around the world</li>
+<li>Get custom designs tailored to your brand’s identity</li>
+<li>Cost-effective, high-quality creative solutions</li>
+<li>Direct collaboration with designers for perfect results</li>
+</ul>
+
+<p>Make your brand stand out – Post a project and hire a top designer today!</p>
+<br>
+<p><b>Whether you’re a freelancer looking to showcase your design skills or a business in need of creative solutions, this is where great designs come to life!</b></p>
+
+<div class="btn-pg d-flex justify-content-around py-4">
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Start Your Journey as Freelancer
+</button>
+<button type="button" class="btn pg-btn"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  Hire a freelancer
+</button></div>
+</div>
+</div>
+{% endblock main %}

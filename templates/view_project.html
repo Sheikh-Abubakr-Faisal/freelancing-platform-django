@@ -1,0 +1,31 @@
+{% extends "client_slider.html" %}
+{% block title %}View Project{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/view_project.css">
+
+<div class="container py-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h3>{{ project.title }}</h3>
+    </div>
+    <div class="card-body">
+      <p><strong>Description:</strong> {{ project.description }}</p>
+      <p><strong>Budget:</strong> ${{ project.budget }}</p>
+      <p><strong>Deadline:</strong> {{ project.deadline }}</p>
+      <p><strong>Category:</strong> {{ project.category }}</p>
+      <p><strong>Status:</strong> 
+        {% if project.status == 'Open' %}
+          <span class="badge bg-success">Open</span>
+        {% else %}
+          <span class="badge bg-secondary">Closed</span>
+        {% endif %}
+      </p>
+    </div>
+    <div class="card-footer">
+      <a href="{% url 'client_manage_project' %}" class="btn btn-secondary">Back to Projects</a>
+    </div>
+  </div>
+</div>
+
+{% endblock main %}

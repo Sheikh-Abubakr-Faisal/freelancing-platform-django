@@ -1,0 +1,73 @@
+.Navbar-brand {
+    font-size: 2rem;
+    color: black;
+    font-family: "Satisfy", serif;
+}
+
+.Navbar-brand:hover {
+    color: black;
+}
+
+.nav-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "Montserrat", serif; 
+}
+
+.nav-link:hover {
+    color: rgb(32, 212, 41);
+}
+
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+    border: 2px solid rgb(32, 212, 41);
+    font-family: "Montserrat", serif;
+}
+
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: rgb(32, 212, 41);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+.login_form {
+    font-family: "Poppins", "sans-serif";
+    background: #ececec;
+}
+
+.box-area {
+    width: 930px;
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px){
+    .box-area {
+        margin: 0 10px;
+
+    }
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+    .right-box {
+        padding: 20px;
+    }
+}

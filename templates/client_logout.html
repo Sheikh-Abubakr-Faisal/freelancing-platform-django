@@ -1,0 +1,17 @@
+{% extends "client_slider.html" %}
+{% block title %}Logout{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_logout.css">
+
+<div class="logout-box">
+    <i class="bi bi-box-arrow-right"></i>
+    <h4>Are you sure you want to log out?</h4>
+    <p>You will be redirected to the login page.</p>
+    <div class="d-grid gap-2">
+      <a href="client_perform_logout" class="btn btn-danger">Logout</a>
+      <a href="client_dashboard" class="btn btn-secondary">Cancel</a>
+    </div>
+  </div>
+
+{% endblock main %}

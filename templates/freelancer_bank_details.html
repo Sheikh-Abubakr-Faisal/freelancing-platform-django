@@ -1,0 +1,50 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Bank Details{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_bank_details.css">
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Bank Details</h2>
+  
+    <div class="bank-details-container">
+      <form>
+        <!-- Account Holder Name -->
+        <div class="mb-3">
+          <label for="holder" class="form-label">Account Holder Name</label>
+          <input type="text" id="holder" class="form-control" placeholder="Enter account holder name" required />
+        </div>
+  
+        <!-- Bank Name -->
+        <div class="mb-3">
+          <label for="bank" class="form-label">Bank Name</label>
+          <input type="text" id="bank" class="form-control" placeholder="Enter your bank name" required />
+        </div>
+  
+        <!-- Branch Code -->
+        <div class="mb-3">
+          <label for="branch" class="form-label">Branch Code</label>
+          <input type="text" id="branch" class="form-control" placeholder="Enter branch code" required />
+        </div>
+  
+        <!-- Account Number -->
+        <div class="mb-3">
+          <label for="account" class="form-label">Account Number</label>
+          <input type="text" id="account" class="form-control" placeholder="Enter your account number" required />
+        </div>
+  
+        <!-- IBAN (Optional) -->
+        <div class="mb-3">
+          <label for="iban" class="form-label">IBAN (Optional)</label>
+          <input type="text" id="iban" class="form-control" placeholder="e.g., PK36SCBL0000001123456702" />
+        </div>
+  
+        <!-- Save Button -->
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Save Bank Details</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock main %}

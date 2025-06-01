@@ -1,0 +1,89 @@
+{% extends "client_slider.html" %}
+{% block title %}Edit Profile{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/client_edit_profile.css">
+
+<div class="container py-5">
+  <div class="form-container">
+    <h2 class="mb-4 text-center">Edit Profile</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <!-- Profile Picture -->
+      <div class="form-section text-center">
+        <img src="/media/{{profile.pfp}}" alt="Profile" class="profile-picture-preview mb-3" />
+        <div>
+          <input type="file" class="form-control w-auto d-inline-block" id="pfp" name="pfp" />
+        </div>
+      </div>
+
+      <!-- Basic Info -->
+      <div class="form-section">
+        <h6>Basic Information</h6>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="first_name" id="first_name" value="{{ user.first_name }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" name="last_name" id="last_name" value="{{ user.last_name }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" value="{{ user.email }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="{{ profile.phone }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location" value="{{ profile.location }}" />
+          </div>
+          <div class="col-md-6">
+            <label for="company_name" class="form-label">Company Name</label>
+            <input type="text" class="form-control" name="company_name" id="company_name" value="{{client_profile.company_name}}"/>
+          </div>
+          <div class="col-md-6">
+            <label for="company_size" class="form-label">Company Size</label>
+            <input type="number" class="form-control" name="company_size" id="company_size" value="{{client_profile.company_size}}"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="form-section">
+        <h6>About Me</h6>
+        <textarea class="form-control" rows="4" name="bio">{{ profile.bio }}</textarea>
+      </div>
+
+      <!-- Projects Posted -->
+      <div class="form-section">
+        <h6>Projects Posted</h6>
+        <textarea class="form-control" rows="3" placeholder="List any recent or upcoming projects..."></textarea>
+      </div>
+
+      <!-- Hiring History -->
+      <div class="form-section">
+        <h6>Hiring History</h6>
+        <input type="text" class="form-control" name="hiring_history" value="{{ client_profile.hiring_history }}" />
+      </div>
+
+      <!-- Shared Briefs -->
+      <div class="form-section">
+        <h6>Shared Files / Briefs</h6>
+        <input type="file" class="form-control" multiple />
+        <div class="file-preview text-muted small">Upload PDFs, images, or documents related to your projects.</div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="text-end">
+        <button type="reset" class="btn btn-secondary me-2">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock main %}

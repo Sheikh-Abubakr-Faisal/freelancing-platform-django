@@ -1,0 +1,30 @@
+{% extends "client_slider.html" %}
+{% block title %}Delete Project{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/delete_project.css">
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow border-danger">
+        <div class="card-header bg-danger text-white text-center">
+          <h3>Confirm Delete</h3>
+        </div>
+        <div class="card-body text-center">
+          <p class="fs-5">
+            Are you sure you want to delete the project: 
+            <strong class="text-danger">"{{ project.title }}"</strong>?
+          </p>
+          <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger me-2">Yes, Delete</button>
+            <a href="{% url 'client_manage_project' %}" class="btn btn-secondary">Cancel</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock main %}

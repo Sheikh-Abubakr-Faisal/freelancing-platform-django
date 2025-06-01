@@ -1,0 +1,27 @@
+body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .earnings-card {
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      background-color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #495057;
+    }
+    .card-amount {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .table thead {
+      background-color: #e9ecef;
+    }
+    .table tbody tr:hover {
+      background-color: #f1f3f5;
+    }

@@ -1,0 +1,93 @@
+{% extends "client_slider.html" %}
+{% block title %}Client Dashboard{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/client_dashboard.css">
+
+<div class="container mt-5">
+  <h2 class="mb-4 fw-bold">Client Dashboard</h2>
+
+  <div class="row g-4">
+
+    <!-- Total Spent -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-cash-coin dashboard-icon text-success"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Total Spent</h5>
+            <h6 class="card-subtitle">$4,300</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ongoing Projects -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-briefcase-fill dashboard-icon text-primary"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Ongoing Projects</h5>
+            <h6 class="card-subtitle">2 Projects</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inbox Messages -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-chat-dots-fill dashboard-icon text-warning"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Inbox Messages</h5>
+            <h6 class="card-subtitle">5 New</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Freelancers Hired -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-person-check-fill dashboard-icon text-info"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Freelancers Hired</h5>
+            <h6 class="card-subtitle">3 Hired</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Views -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-eye-fill dashboard-icon text-danger"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Profile Views</h5>
+            <h6 class="card-subtitle">110 Views</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posted Projects -->
+    <div class="col-md-4">
+      <div class="card dashboard-card shadow-sm">
+        <div class="card-body d-flex align-items-center">
+          <i class="bi bi-folder-fill dashboard-icon text-secondary"></i>
+          <div class="ms-3">
+            <h5 class="card-title mb-1">Posted Projects</h5>
+            <h6 class="card-subtitle">8 Projects</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock main %}

@@ -1,0 +1,277 @@
+.Navbar-brand {
+    font-size: 2rem;
+    color: black;
+    font-family: "Satisfy", serif;
+}
+
+.Navbar-brand:hover {
+    color: black;
+}
+
+.nav-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+   font-family: "Montserrat", serif; 
+}
+
+.nav-link:hover {
+    color: rgb(32, 212, 41);
+}
+
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    margin-right: -35px;
+    outline: none;
+    border: 2px solid rgb(32, 212, 41);
+    font-family: "Montserrat", serif;
+}
+
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: rgb(32, 212, 41);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+.main {
+    background: url('/static/img/cover.png')no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+}
+
+.main h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.btn1 {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 212, 41);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+    margin-right: 12px;
+    
+}
+
+
+.btn2 {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 212, 41);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+
+}
+
+.main pre {
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+}
+
+
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+
+}
+
+.section02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* .section02 h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+} */
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item{
+    list-style: none;
+    /* float : left;
+    padding: 10px; */
+}
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+} 
+
+.card-list .card-item .card-link:hover{
+    border-color: seagreen;
+
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+
+.card-list .card-link .badge {
+    color: rgb(5, 80, 4);
+    padding: 8px 16px;
+    margin: 16px 0 18px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: rgb(175, 249, 179);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: black;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: black;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid black;
+    transform: rotate(-45deg);
+    transition: 0.4 ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: white;
+    background-color: rgb(32, 212, 41);
+
+}
+
+.card-list .card-link .badge.Marketing {
+    color: rgb(60, 2, 75);
+    background: rgb(242, 192, 250)
+}
+
+.card-list .card-link .badge.AI {
+    color: rgb(30, 6, 161);
+    background: rgb(221, 220, 248)
+}
+.card-list .card-link .badge.Design {
+    color: rgb(141, 4, 4);
+    background: rgb(234, 115, 115)
+}
+.card-list .card-link .badge.Writing {
+    color: rgb(111, 86, 2);
+    background: rgb(255, 233, 159)
+}
+.card-list .card-link .badge.Video {
+    color: rgb(95, 3, 88);
+    background: rgb(235, 199, 255)
+}
+.card-list .card-link .badge.Management {
+    color: rgb(0, 80, 80);
+    background: rgb(165, 255, 255)
+}
+.card-list .card-link .badge.Audio {
+    color: rgb(240, 108, 0);
+    background: rgb(255, 209, 183)
+}
+
+.card-list .card-link.development:hover .card-button{
+    color: rgb(5, 80, 4);
+    background-color: rgb(175, 249, 179);
+}
+.card-list .card-link.AI:hover .card-button{
+    color: rgb(30, 6, 161);
+    background: rgb(221, 220, 248)
+}
+.card-list .card-link.Marketing:hover .card-button{
+    color: rgb(60, 2, 75);
+    background: rgb(242, 192, 250)
+}
+.card-list .card-link.Design:hover .card-button{
+    color: rgb(141, 4, 4);
+    background: rgb(234, 115, 115)
+}
+.card-list .card-link.Writing:hover .card-button{
+    color: rgb(111, 86, 2);
+    background: rgb(255, 233, 159)
+}
+.card-list .card-link.Video:hover .card-button{
+    color: rgb(95, 3, 88);
+    background: rgb(235, 199, 255)
+}
+.card-list .card-link.Management:hover .card-button{
+    color: rgb(0, 80, 80);
+    background: rgb(165, 255, 255)
+}
+.card-list .card-link.Audio:hover .card-button{
+    color: rgb(240, 108, 0);
+    background: rgb(255, 209, 183)} 
+      
+.hero h2, .hero p {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+      
+.about-section img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+blockquote {
+        font-style: italic;
+        border-left: 4px solid #ffffff88;
+        padding-left: 15px;
+      }
+      
+footer h5 {
+        margin-bottom: 15px;
+      }
+      
+      @media (max-width: 768px) {
+.hero h2 {
+          font-size: 1.8rem;
+        }
+      
+.hero p {
+          font-size: 1rem;
+        }
+      }
+      
+
+  

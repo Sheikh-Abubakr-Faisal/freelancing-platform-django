@@ -1,0 +1,88 @@
+{% extends "freelancer_slider.html" %}
+{% block title %}Freelancer Profile{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/freelancer_profile_view.css">
+
+<div class="container py-5">
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-danger">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+    <h2 class="mb-4 text-center">View Profile</h2>
+  
+    <!-- Profile Picture and Name -->
+    <div class="text-center mb-4">
+      <img src="/media/{{profile.pfp}}" alt="Profile" class="profile-picture mb-2" />
+      <h4>{{ user.first_name}} {{ user.last_name }}</h4>
+      <p class="text-muted">{{profile.location}}</p>
+    </div>
+  
+    <!-- Basic Info -->
+    <div class="info-box">
+      <div class="section-title">Basic Information</div>
+      <p><strong>Username:</strong> {{user.username}}</p>
+      <p><strong>Email:</strong> {{user.email}}</p>
+      <p><strong>Phone:</strong> {{profile.phone}}</p>
+      <p><strong>Hourly Rate:</strong> $30/hr</p>
+    </div>
+  
+    <!-- About Me -->
+    <div class="info-box">
+      <div class="section-title">About Me</div>
+      <p>{{profile.bio}}</p>
+    </div>
+  
+    <!-- Skills -->
+<div class="info-box">
+  <div class="section-title">Skills</div>
+  {% if skills %}
+    {% for skill in skills %}
+      <span class="badge bg-primary me-1 mb-1">{{ skill }}</span>
+    {% endfor %}
+  {% else %}
+    <p class="text-muted">No skills added.</p>
+  {% endif %}
+</div>
+
+
+  
+    <!-- Experience -->
+    <div class="info-box">
+      <div class="section-title">Experience</div>
+      <p>{{freelancer_profile.Experience}}</p>
+    </div>
+  
+    <!-- Job Success Rate -->
+    <div class="info-box">
+      <div class="section-title">Job Success Rate</div>
+      <p>95%</p>
+    </div>
+  
+  <!-- Certifications -->
+<div class="info-box">
+  <div class="section-title">Certifications</div>
+  <div class="file-preview d-flex flex-wrap">
+    {% for cert in certifications %}
+      <img src="{{ cert.file.url }}" alt="Certificate {{ forloop.counter }}" width="100" height="130" class="me-2 mb-2" />
+    {% empty %}
+      <p>No certifications uploaded.</p>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Portfolio -->
+<div class="info-box">
+  <div class="section-title">Portfolio</div>
+  <div class="file-preview d-flex flex-wrap">
+    {% for item in portfolio_items %}
+      <img src="{{ item.image.url }}" alt="Project {{ forloop.counter }}" width="100" height="100" class="me-2 mb-2" />
+    {% empty %}
+      <p>No portfolio items yet.</p>
+    {% endfor %}
+  </div>
+</div> 
+
+  
+{% endblock main %}

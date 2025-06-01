@@ -1,0 +1,14 @@
+.pages {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pg-btn {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 212, 41);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}

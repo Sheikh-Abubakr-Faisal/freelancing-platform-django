@@ -1,0 +1,64 @@
+{% extends "client_slider.html" %}
+{% block title %}Client Profile{% endblock title %}
+{% block main %}
+
+<link rel="stylesheet" href="/static/css/client_view_profile.css">
+
+<div class="container py-5">
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-danger">{{ message }}</div>
+  {% endfor %}
+  {% endif %}
+  <h2 class="mb-4 text-center">Client Profile</h2>
+
+  <!-- Profile Picture and Name -->
+  <div class="text-center mb-4">
+    <img src="/media/{{profile.pfp}}" alt="Profile" class="profile-picture mb-2" />
+    <h4>{{ user.first_name}} {{ user.last_name }}</h4>
+    <p class="text-muted">{{profile.location}}</p>
+  </div>
+
+  <!-- Basic Info -->
+  <div class="info-box">
+    <div class="section-title">Basic Information</div>
+    <p><strong>Username:</strong> {{user.username}}</p>
+    <p><strong>Email:</strong> {{user.email}}</p>
+    <p><strong>Phone:</strong> {{profile.phone}}</p>
+    <p><strong>Company:</strong> {{client_profile.company_name}}</p>
+    <p><strong>Company Size:</strong> {{client_profile.company_size}}</p>
+  </div>
+
+  <!-- About Me -->
+  <div class="info-box">
+    <div class="section-title">About Me</div>
+    <p>{{profile.bio}}</p>
+  </div>
+
+  <!-- Posted Projects -->
+  <div class="info-box">
+    <div class="section-title">Posted Projects</div>
+    <ul>
+      <li>Mobile App Development – 15 Mar 2024</li>
+      <li>Landing Page Design – 01 Jan 2024</li>
+      <li>Logo Branding – 10 Dec 2023</li>
+    </ul>
+  </div>
+
+  <!-- Job History -->
+  <div class="info-box">
+    <div class="section-title">Hiring History</div>
+    <p>{{client_profile.hiring_history}}</p>
+  </div>
+
+  <!-- Portfolio / Attachments -->
+  <div class="info-box">
+    <div class="section-title">Shared Files / Briefs</div>
+    <div class="file-preview d-flex flex-wrap">
+      <img src="https://via.placeholder.com/100x130.png?text=Brief+1" alt="Brief" />
+      <img src="https://via.placeholder.com/100x130.png?text=Brief+2" alt="Brief" />
+    </div>
+  </div>
+</div>
+
+{% endblock main %}
